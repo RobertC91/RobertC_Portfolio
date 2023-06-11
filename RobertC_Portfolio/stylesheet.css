@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    list-style-type: none;
+}
+
+:root {
+    --dark:#0C243C;
+    --basic:white;
+    --secondary:#55C2C3;
+    --light: #C9D1D5;
+    --primary: #174D72;
+    --alt: purple;
+}
+ 
+
+body {
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    background:var(--light)
+
+}
+
+header {
+    font-family: "Cinzel", serif;
+    padding: 15px 6% 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+
+header h1 {
+    font-size: 75px;
+    color: var(--basic);
+    padding: 5px 1% 5px 6%;
+    line-height: 1;  
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color:var(--light);
+    margin-right: 5px;
+    font-size: 30px;
+    transition: all 0.25s ease-in;
+}
+
+nav a:hover {
+    background-size: 100% 100%;
+    color: var(--secondary);
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+main  {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.navigation {
+    color:var(--basic);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+.latin {
+    font-family: 'Merienda', cursive;
+    color: var(--light);
+    background: var(--primary);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    padding: 2% 4%;
+    font-size: 30px;
+    
+    
+}
+
+img {
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+    flex: auto;
+}
+
+.cthulhu {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.info > h2 {
+    font-family: "Cinzel", serif;
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 5px solid var(--primary);
+    font-size: 55px;
+    line-height: 1.1;
+}
+
+.info > div {
+    flex: 0 0 77%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-item {
+    border: 5px solid var(--dark);
+    background-color: var(--primary);
+    color: var(--light);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 10px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 1.5s;
+    font-size: 1.2rem;    
+}
+
+.flex-item:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
+}
+
+.flex-item:hover {
+    background-color: var(--alt);
+}
+
+.flex-item div {
+    background-color: var(--dark);
+    padding: 8px 10px;
+}
+
+.flex-item h3 {
+    font-size: 1.9rem;
+}
+
+.info address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.info address a {
+    color: var(--light);
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-style: normal;
+    background-image: linear-gradient(270 deg, var(--primary) 0%, var(--primary) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.5s ease-in;
+    margin: 0 0.2rem 0.1rem;
+    background-color: var(--primary);
+    display:inline-block;
+}
+
+.info address a:hover {
+    background-size: 100% 88%;
+    color: var(--secondary);
+    background-color: var(--alt);
+}
+
+@media screen and (max-width: 980px) {
+    header {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 10vw;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    .info > h2,
+    .info > div {
+        flex: 0 0 100%;
+    }
+
+    .info > h2 {
+        border-right: none;
+        border-bottom: 4px solid var(--primary);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        text-align: left;
+        font-size: 7vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flex-item,
+    .flex-item:first-child {
+      flex-basis: 100%;
+    }
+  
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+  
+    .latin {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .contact address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
