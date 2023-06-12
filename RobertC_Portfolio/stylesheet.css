@@ -93,6 +93,7 @@ img {
     max-width: 300px;
     max-height: 300px;
     flex: auto;
+    float: right;
 }
 
 .cthulhu {
